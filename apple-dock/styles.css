@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100dvh;
+    width: 100dvw;
+    position: relative;
+    overscroll-behavior: none;
+}
+.dock-container{
+    display: flex;
+    justify-items: center;
+    gap: 0.7em;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    margin-inline: 0.5em;
+    padding: 0.5em;
+    border-radius: 1.3em;
+    border: 1px solid hsl(0, 0%, 100%, 0.3);
+    background: hsl(0, 0%, 100%, 0.2);
+    backdrop-filter: blur(2px);
+    /* box-shadow: inset 0 0 8px 1px hsl(0, 0%, 100%, 0.6); */
+
+}
+.dock-container > img{
+    width: 4.5em;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.wallpaper{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.wallpaper > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
